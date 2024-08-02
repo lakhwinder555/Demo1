@@ -16,7 +16,7 @@ pipeline {
                 branch 'staging'
             }
             steps {
-                echo 'Deploying to staging...'
+                echo 'Deploying to staging... 12345'
             }
         }
     }
