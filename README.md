@@ -1,2 +1,2 @@
-Hello Everyone Welcome to DIts!
+Hello Everyone Welcome to DITs!
 How are you ?
