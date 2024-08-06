@@ -1,32 +1,32 @@
 pipeline {
     agent any
+
     stages {
         stage('Build') {
             steps {
                 echo 'Building...'
+                // Add build steps here
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing...'
+                // Add test steps here
             }
         }
         stage('Deploy') {
-            when {
-                branch 'staging'
-            }
             steps {
-                echo 'Deploying to staging... 1234'
+                echo 'Deploying...'
+                // Add deploy steps here
             }
         }
-    }
-    post {
-        always {
-            stage('Email Notification') {
-                steps {
-                    mail bcc: '', body: '''Email notification sent 
-                    Thanks''', cc: '', from: '', replyTo: '', subject: 'Jenkins Job Notification', to: 'lakhwindersinghwins@gmail.com'
-                }
+        stage('Email Notification') {
+            steps {
+                // Example: using the emailext step for sending emails
+                emailext(
+                    mail bcc: '', body: '''email notificatoin sent 
+                    thanks''', cc: '', from: '', replyTo: '', subject: 'jenkinsjobs', to: 'lakhwindersinghwins@gmail.com'
+                )
             }
         }
     }
