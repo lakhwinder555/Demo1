@@ -22,11 +22,8 @@ pipeline {
         }
         stage('Email Notification') {
             steps {
-                // Example: using the emailext step for sending emails
-                emailext(
                     mail bcc: '', body: '''email notificatoin sent 
                     thanks''', cc: '', from: '', replyTo: '', subject: 'jenkinsjobs', to: 'lakhwindersinghwins@gmail.com'
-                )
             }
         }
     }
