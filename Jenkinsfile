@@ -20,7 +20,7 @@ pipeline {
                 
             }
         }
-        stage('Email Notification') {
+        stage('Email Notifications') {
             steps {
                     mail bcc: '', body: '''email notificatoin sent 
                     thanks''', cc: '', from: '', replyTo: '', subject: 'jenkinsjobs', to: 'lakhwindersinghwins@gmail.com'
