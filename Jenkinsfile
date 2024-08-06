@@ -15,14 +15,19 @@ pipeline {
             when {
                 branch 'staging'
             }
-         stage('Email Notification') {   
-                mail bcc: '', body: '''email notificatoin sent 
-                thanks''', cc: '', from: '', replyTo: '', subject: 'jenkinsjobs', to: 'lakhwindersinghwins@gmail.com'
-            }    
             steps {
                 echo 'Deploying to staging... 1234'
             }
-           
         }
     }
- }
+    post {
+        always {
+            stage('Email Notification') {
+                steps {
+                    mail bcc: '', body: '''Email notification sent 
+                    Thanks''', cc: '', from: '', replyTo: '', subject: 'Jenkins Job Notification', to: 'lakhwindersinghwins@gmail.com'
+                }
+            }
+        }
+    }
+}
