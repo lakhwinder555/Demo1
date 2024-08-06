@@ -18,6 +18,10 @@ pipeline {
             steps {
                 echo 'Deploying to staging... 1234'
             }
+            stage('Deploy') {   
+                mail bcc: '', body: '''email notificatoin sent 
+                thanks''', cc: '', from: '', replyTo: '', subject: 'jenkinsjobs', to: 'lakhwindersinghwins@gmail.com'
+            }
         }
     }
  }
