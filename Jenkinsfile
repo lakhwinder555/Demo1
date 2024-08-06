@@ -20,11 +20,4 @@ pipeline {
             }
         }
     }
-    post {
-        success {
-            mail bcc: '', body: '''Hi Welcome to Jenkins Email Notification 
-            Thanks''', cc: '', from: '', replyTo: '', subject: 'jenkinsjob', to: 'lakhwindersinghwins@gmail.com'
-        }
-    }
-}
-
+ }
