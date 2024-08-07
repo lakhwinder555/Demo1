@@ -1,2 +1,2 @@
 Hello Everyone Welcome to DITS!
-How are you Rahul?
+How Are you Rahul?
